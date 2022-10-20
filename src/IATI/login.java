@@ -20,21 +20,6 @@ public class login {
         password.sendKeys("123456789");
         WebElement signin=driver.findElement(By.xpath("//button[@id=\"btn\"]"));
          signin.click();
-//         String activityurl=driver.getCurrentUrl();
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-         WebElement activitybutton= driver.findElement(By.xpath("//button[@class=\"button primary-btn relative font-bold\"]" ));
-         activitybutton.click();
-         //actiivtvy dropdown
-            WebElement activity_drop= driver.findElement(By.xpath("//a[contains(.,'Add activity manually')]" ));
-            activity_drop.click();
-            
-
-
-       // System.out.println("Successfully login");
-       // System.out.println("activityurl="+activityurl);
-
-
-
 
 
     }
