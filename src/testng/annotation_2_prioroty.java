@@ -1,22 +1,20 @@
-package IATI;
+package testng;
 
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
-public class Annotations {
-    @BeforeMethod
+public class annotation_2_prioroty {
+    @BeforeClass
     public void login(){
         System.out.println("Logged in");
     }
 
-    @AfterMethod
+    @AfterClass
     public void logout(){
         System.out.println("Loggedout");
     }
     @Test(priority = 0)
     public void profile(){
-        System.out.println("Thisis profile");
+        System.out.println("This is profile");
     }
     @Test(priority = 0)
     public void balance(){
