@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-
 <suite name="All Test Suite">
-    <test name="annotationdemo">
-        <classes>
-            <class name="testng.TC1">
-                <methods>
-                    <include name="openbrowser"/>
-                    <include name=" closebrowser"/>
+    <test name="grouping">
+        <groups>
+            <run>
+                <!--<include name="one"/>-->
+                <!-- <exclude name="one"/>-->
+             </run>
+         </groups>
+         <classes>
 
-                </methods>
-            </class>
-        </classes>
-    </test>
+             <class name="testng.groupingtest" />
 
-</suite>
+
+
+         </classes>
+
+     </test>
+ </suite>

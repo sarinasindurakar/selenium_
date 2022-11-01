@@ -9,23 +9,11 @@ import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
-public class orange_Hrm {
-    WebDriver driver;
+public class orange_Hrm extends webdriver {
 
-
-    @BeforeClass
-    public void setup(){
-        System.setProperty("webdriver.chrome.driver","F:\\Internship-2022\\Automation\\chromedriver.exe");
-        driver = new ChromeDriver();
-        //driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
-    }
-    @Test(dependsOnMethods={"setup"})
-    public void open(){
-        driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
-    }
-
-    @Test(dependsOnMethods = {"open"})
+    @Test(priority = 1)
     public void login(){
+        driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
     WebElement Username=driver.findElement(By.xpath("//input[@name=\"username\"]"));
@@ -37,7 +25,7 @@ public class orange_Hrm {
 
     }
 
-    @Test(dependsOnMethods = {"open","login"})
+    @Test(priority = 2,dependsOnMethods = {"login"})
     public void searchadmin(){
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         WebElement menuPIM = driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[1]/aside/nav/div[2]/ul/li[2]/a"));
@@ -50,8 +38,10 @@ public class orange_Hrm {
 
         System.out.println("Search For Employee");
     }
-    @Test(dependsOnMethods ={"open","login"})
+    @Test(priority = 3,dependsOnMethods = {"login"})
     public void logout(){
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
         WebElement profile=driver.findElement(By.xpath("//span[@class=\"oxd-userdropdown-tab\"]"));
         profile.click();
 
@@ -59,5 +49,6 @@ public class orange_Hrm {
         logout.click();
 
     }
+
 
 }

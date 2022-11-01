@@ -16,9 +16,14 @@ public class signup {
         publisher_id.sendKeys("27693 ");
         WebElement organization_register=driver.findElement(By.id("registration-number"));
         organization_register.sendKeys("27693 ");
-        WebElement country=driver.findElement(By.xpath("//input[@class=\"multiselect-search\"]"));
+
+        WebElement country=driver.findElement(By.xpath("(//input[@class=\"multiselect-search\"])[1]"));
         country.click();
-        country.findElement(By.xpath("//li[@id=\"multiselect-option-AF-CBR\"]")).click();
+        country.findElement(By.xpath("//li[@id=\"multiselect-option-AD\"]")).click();
+
+        WebElement organization=driver.findElement(By.xpath("(//input[@class=\"multiselect-search\"])[2]"));
+        organization.click();
+        organization.findElement(By.xpath("//li[@id=\"multiselect-option-XI-BRIDGE\"]")).click();
 
         WebElement nextbutton=driver.findElement(By.xpath("//button[@class=\"btn btn-next\"]"));
         nextbutton.click();
