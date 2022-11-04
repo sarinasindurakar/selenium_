@@ -5,9 +5,9 @@ import org.testng.annotations.DataProvider;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
-public class login_dataprovider  {
+public class login_dataprovider {
     @DataProvider(name = "data")
-    public static Object [] [] getdata () throws IOException {
+    public static Object[][] getdata() throws IOException{
 
         /*Object [] [] data = new Object [4] [2];
 
@@ -17,16 +17,22 @@ public class login_dataprovider  {
         data [3] [0] = "admin";		        data [3] [1] = "12345678";
 
         return data;
-
-
-        String loginData[][]= {
-            {"admin1234","12345678","Valid"},
-            {"admin","1234","Invalid"},
-            {"admin1234","23232","Invalid"},
-            {"admin","12345678","Invalid"}
-    };
-        return loginData;
 */
+/*
+        String loginData[][] = {
+               // {"admin@yourstore.com", "admin", "Valid"},
+                //{"admin@yourstore.com", "adm", "Invalid"},
+                //{"adm@yourstore.com", "admin", "Invalid"},
+                //{"adm@yourstore.com", "adm", "Invalid"}
+               //{"admin1234", "12345678", "Valid"},
+               // {"admin", "1234", "Invalid"},
+                //{"admin1234", "23232", "Invalid"},
+                //{"admin", "12345678", "Invalid"}
+        };
+       // return loginData;
+       */
+
+
         String path="src/datafiles/dataprovider.xlsx";
         XLUtility xlutil=new XLUtility(path);
 
@@ -50,5 +56,6 @@ public class login_dataprovider  {
 
 
     }
+
 
 

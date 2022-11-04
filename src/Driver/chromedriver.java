@@ -17,11 +17,16 @@ public class chromedriver {
         driver.get("https://iatipublisher-dev.yipl.com.np/login");
         System.out.println("Setting the property of driver");
     }
-    @AfterClass
+
+   /* @AfterClass
     public void tearDown(){
 
         driver.quit();
     }
+    */
+
+
+
 }
 
 
